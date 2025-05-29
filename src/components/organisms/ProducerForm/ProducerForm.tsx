@@ -5,7 +5,7 @@ import styles from "./ProducerForm.module.scss";
 export const ProducerForm = () => {
   const { addProducer } = useProducers();
   const [form, setForm] = useState({
-    documentType: "CPF" as const,
+     documentType: "CPF" as DocumentType,
     document: "",
     name: "",
     farmName: "",
@@ -16,6 +16,8 @@ export const ProducerForm = () => {
     vegetationArea: 0,
     crops: [] as Array<{ type: string; harvestYear: string }>,
   });
+
+  type DocumentType = "CPF" | "CNPJ";
 
   const [currentCrop, setCurrentCrop] = useState({
     type: "",
@@ -190,7 +192,6 @@ export const ProducerForm = () => {
               <option value="">Selecione</option>
               <option value="SP">São Paulo</option>
               <option value="MG">Minas Gerais</option>
-              {/* Adicione outros estados */}
             </select>
           </label>
         </div>
