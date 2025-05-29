@@ -1,54 +1,90 @@
-# React + TypeScript + Vite
+📝 Descrição
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Acessível na nuvem: https://gestao-produtores.vercel.app/
 
-Currently, two official plugins are available:
+Este projeto é um sistema de cadastro de produtores rurais que permite:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Registrar informações de produtores e suas propriedades
 
-## Expanding the ESLint configuration
+Gerenciar dados de áreas cultiváveis e culturas plantadas
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Visualizar dados consolidados através de gráficos
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+✨ Funcionalidades
+Cadastro de Produtores:
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Dados pessoais (nome, documento CPF/CNPJ)
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Informações das propriedades rurais
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+Controle de áreas (total, agricultável e vegetação)
+
+Registro de culturas plantadas
+
+Gestão de Dados:
+
+Adição, edição e remoção de produtores
+
+Validação de documentos (CPF/CNPJ)
+
+Verificação de consistência de áreas
+
+Visualização:
+
+Gráficos de distribuição por estado
+
+Relatório de culturas mais plantadas
+
+🛠️ Tecnologias Utilizadas
+Frontend:
+
+React.js com TypeScript
+
+Context API para gerenciamento de estado
+
+Styled Components e SCSS para estilização
+
+Chart.js/Recharts para visualização de dados
+
+Padrões:
+
+Princípios SOLID
+
+Arquitetura limpa e componentes reutilizáveis
+
+🚀 Como Executar o Projeto
+Pré-requisitos:
+
+Node.js (v16 ou superior)
+
+npm ou yarn
+
+Instalação:
+
+bash
+git clone [URL_DO_REPOSITORIO]
+cd [NOME_DO_PROJETO]
+npm install
+# ou
+yarn install
+Execução:
+
+bash
+npm start
+# ou
+yarn start
+Acesso:
+Abra http://localhost:5173 no seu navegador
+
+🏗️ Estrutura do Projeto
+src/
+├── components/
+│   ├── ProducerForm/       # Formulário de cadastro
+│   ├── ProducerList/       # Listagem e gestão
+│   └── Charts/             # Componentes de gráficos
+├── contexts/
+│   └── ProducersContext.ts # Gerenciamento de estado
+├── types/
+│   └── producerTypes.ts    # Tipos TypeScript
+├── styles/                 # Estilos globais
+└── App.tsx                 # Componente principal
