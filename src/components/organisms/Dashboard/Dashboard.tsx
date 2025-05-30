@@ -1,6 +1,6 @@
 import { useProducers } from "../../../contexts/ProducersContext";
 import styles from "./Dashboard.module.scss";
-import { PieChartComponent } from "./../../utils/PieChart";
+import { PieChartComponent } from "../../../utils/PieChart";
 
 export const Dashboard = () => {
   const { totalFarms, totalArea, statesData, cropsData } = useProducers();

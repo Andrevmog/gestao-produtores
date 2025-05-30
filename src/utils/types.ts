@@ -1,3 +1,5 @@
+declare module 'jest-styled-components';
+
 export interface PieDataItem {
   name: string;
   value: number;

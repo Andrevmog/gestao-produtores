@@ -1,7 +1,7 @@
 import { useProducers } from '../../../contexts/ProducersContext';
 import { useState } from 'react';
 import styles from "./ProducerList.module.scss";
-import type { Producer, Farm, Crop } from '../../utils/types';
+import type { Producer, Farm, Crop } from '../../../utils/types';
 
 
 export const ProducerList = () => {
