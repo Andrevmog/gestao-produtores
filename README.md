@@ -34,6 +34,7 @@ Este projeto é um sistema de cadastro de produtores rurais que permite:
   - Context API para gerenciamento de estado
   - Styled Components e SCSS para estilização
   - Chart.js/Recharts para visualização de dados
+  - Testes em Jest e React Testing Library.
 
 - **Padrões**:
   - Princípios SOLID
